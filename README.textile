@@ -5,10 +5,10 @@ This is the standard setup for hosting a local development environment on your s
 h1. Initial Installation
 
 Windows users should install the following programs *in the order they are listed* on their machines:
-* Git - Run file:///S:/Engineering/vagrant/Git-1.7.9-preview20120201.exe and install with all the recommended defaults.
-* Virtual Box - Run file:///S:/Engineering/vagrant/VirtualBox-4.1.8-75467-Win.exe and install with all the recommended defaults.
-* Ruby - Run file:///S:/Engineering/vagrant/rubyinstaller-1.9.2-p290.exe and install with all the recommended defaults *AND TICKING THE CHECKBOX 'Add Ruby executables to your PATH'* 
-* Ruby DevKit - Run file:///S:/Engineering/vagrant/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe
+* Git - Run S:/Engineering/vagrant/Git-1.7.9-preview20120201.exe and install with all the recommended defaults.
+* Virtual Box - Run S:/Engineering/vagrant/VirtualBox-4.1.8-75467-Win.exe and install with all the recommended defaults.
+* Ruby - Run S:/Engineering/vagrant/rubyinstaller-1.9.2-p290.exe and install with all the recommended defaults *AND TICKING THE CHECKBOX 'Add Ruby executables to your PATH'* 
+* Ruby DevKit - Run S:/Engineering/vagrant/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe
 Linux and OXS make sure you have Git and Ruby installed and skip to the section labeled 'Vagrant Installation'
 
 h1. Ruby DevKit Instructions
