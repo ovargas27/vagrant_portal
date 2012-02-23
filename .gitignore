@@ -1,0 +1,7 @@
+tmp/*
+.chef
+.rake_test_cache
+*.swp
+*.swo
+*~
+.DS_Store
