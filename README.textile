@@ -1,25 +1,29 @@
 h1. Vagrant project for Developing the Customer Portal 
 
 This is the standard setup for hosting a local development environment on your system.  Once setup it will create a headless instance of Unbuntu provisioned with everything you to run a sandboxed instance of the Customer portal. This document is maintained by Murat Yorukoglu.
+
 h1. Initial Installation
+
 Windows users should install the following programs *in the order they are listed* on their machines:
 * Git - Double click "Git":file:///S:/Engineering/vagrant/Git-1.7.9-preview20120201.exe and install with all the recommended defaults.
 * Virtual Box - Double click "Virtual Box":file:///S:/Engineering/vagrant/VirtualBox-4.1.8-75467-Win.exe and install with all the recommended defaults.
 * Ruby - Double click "Ruby":file:///S:/Engineering/vagrant/rubyinstaller-1.9.2-p290.exe and install with all the recommended defaults *AND TICKING THE CHECKBOX 'Add Ruby executables to your PATH'* 
 * Ruby DevKit - "Ruby DevKit*":file:///S:/Engineering/vagrant/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe
+Linux and OXS make sure you have Git and Ruby installed and skip to the section labeled 'Vagrant Installation'
 
 h1. Ruby DevKit Instructions
 
-h2. 1. Preparation
+
+*1. Preparation*
 
     Make sure that you have already installed ruby and included in your path. If you previously installed the legacy DevKit devkit-3.4.5r3-20091110.7z, its artifacts were extracted into each Ruby installation and need to be manually removed. Remove the gcc.bat, make.bat, and sh.bat stub batch files in <RUBY_INSTALL_DIR>\bin and the <RUBY_INSTALL_DIR>\devkit subdirectory for each Ruby installation using the legacy DevKit.
     If you previously installed one of the legacy self-extracting DevKit’s, follow the SFX DevKit upgrade instructions.
 
-h2. 2. Extract Files
+*2. Extract Files*
 
     Extract files to C:\DevKit. NOTE: the SFX is really a 7-Zip archive with a bit of embedded magic. If you already have 7-Zip installed, you can simply right-click it and extract it’s contents as you would a normal 7z archive. In the instructions that follow, the directory that you selected is identified as C:\DevKit.
 
-h2. 3. Run Installation Scripts
+*3. Run Installation Scripts*
 
 * From an admin CMD prompt cd into C:\DevKit from Step 3 above.
 * Run 'ruby dk.rb init' to generate the config.yml file to be used later in this Step. Your installed Rubies will be listed there (only those installed by a RubyInstaller package are detected at present).
@@ -27,7 +31,7 @@ h2. 3. Run Installation Scripts
 * [optional] run 'ruby dk.rb review' to review the list of Rubies to be enhanced to use the DevKit and verify the changes you made to it are correct.
 * finally, run 'ruby dk.rb install' to DevKit enhance your installed Rubies.
 
-h2. 4. Test Installation
+*4. Test Installation*
 
     Confirm your Ruby environment is correctly using the DevKit by running 'gem install rdiscount --platform=ruby'. RDiscount should install correctly and you should see 'Temporarily enhancing PATH to include DevKit...' in the screen messages. Next run 'ruby -rubygems -e "require 'rdiscount'; puts RDiscount.new('Hello RubyInstaller').to_html"' to confirm that the rdiscount gem is working.
 
@@ -39,12 +43,12 @@ h1. Vagrant Installation
 * If you have a 64bit OS run 'vagrant box lucid64 file:///S:/Engineering/vagrant/lucid64.box' otherwise run 'vagrant box lucid64 file:///S:/Engineering/vagrant/lucid64.box'.
 * Run 'vagrant box list' and make sure you see either lucid64 or lucid32 depending on what command you ran.
 
-h1. Get the vagrant_portal Repo
+h1. Get the vagrant_portal repo
 
-* Make the following directory: c:/portal *PLEASE NOTE THAT THIS IS CASE SENSITIVE*
-* From an admin CMD prompt run 'git clone https://github.com/ovargas27/RolesManagement.git'.
+* Make the following directory: c:\vagrant (or ~/vagrant)
+* From an admin CMD prompt cd into the directory you just created and run 'git clone https://myorukoglu@github.com/myorukoglu/vagrant_portal.git'.
 
-h1. Get the Portal Repo
+h1. Get the Portal repo
 
-* Make the following directory: c:/portal *PLEASE NOTE THAT THIS IS CASE SENSITIVE*
-* from an admin CMD prompt run 'git clone https://github.com/ovargas27/RolesManagement.git'
+* Make the following directory: c:\portal  (or ~/Projects/portal) *PLEASE NOTE THAT THIS IS CASE SENSITIVE*
+* From an admin CMD prompt cd into the directory you just created and run 'git clone https://github.com/ovargas27/RolesManagement.git'
