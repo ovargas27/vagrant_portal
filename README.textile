@@ -52,4 +52,4 @@ h1. Get the Portal repo
 
 h1. Start Vagrant
 From an admin CMD prompt cd to c:\vagrant\vagrant_portal (or ~/vagrant/vagrant_portal) and run 'vagrant up'.
-SSH into 
+SSH into
